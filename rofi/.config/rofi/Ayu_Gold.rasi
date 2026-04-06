@@ -1,0 +1,73 @@
+* {
+   font:             "JetBrainsMono Nerd Font 11";
+   
+   gold:             #e6b450;
+   blue:             #59c2ff;
+   red:              #ff3333;
+   dark1:            #0a0e14;
+   dark2:            #1f2430;
+   dark3:            #b3b1ad;
+   dark4:            #5c6773;
+   light1:           #e6e1cf;
+
+   background-color: transparent;
+   border-color:     @gold; /* Borde principal en dorado */
+   text-color:       @dark3;
+   dark-text-color:  @dark4;
+   main-color:       @gold;
+   highlight:        @light1;
+   urgent-color:     @red;
+   selected-color:   @dark2;
+} 
+
+window {
+   background-color: #0a0e14F2;
+   width: 45%;
+   padding: 20px;
+   fullscreen: false;
+   border:  2px;
+   border-radius: 8px;
+   border-color: @border-color;
+}
+
+mainbox {
+   spacing: 10px;
+}
+
+listview {
+   fixed-height: false;
+   dynamic: true;
+   scrollbar: false;
+   spacing: 4px;
+   lines: 7;
+}
+
+element {
+   padding: 8px 12px;
+   border-radius: 4px;
+}
+
+element normal.normal, element alternate.normal {
+   text-color: @dark-text-color;
+}
+
+element selected.normal {
+    background-color: @selected-color;
+    text-color:       @gold; /* Letra dorada al seleccionar */
+}
+
+inputbar {
+   spacing: 10px;
+   padding: 8px;
+   background-color: @dark2;
+   border-radius: 4px;
+   children:   [ prompt, entry ];
+}
+
+prompt {
+   text-color: @gold; /* Símbolo del prompt en dorado */
+}
+
+entry {
+   text-color: @light1;
+}
