@@ -9,10 +9,12 @@ M.base46 = {
 	theme = "ayu_dark",
   transparency = true,
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	hl_override = {
+		Comment = { italic = true },
+		["@comment"] = { italic = true },
+	-- Forzamos el color dorado (Ayu Gold) en el logo del dashboard
+    NvDashAscii = { fg = "#e6b450" },
+  }
 }
 
 M.nvdash = { load_on_startup = true }
