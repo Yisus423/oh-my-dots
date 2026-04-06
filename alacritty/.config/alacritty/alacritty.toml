@@ -1,0 +1,43 @@
+[window]
+# Transparencia (0.0 a 1.0). 0.85 es el punto dulce para Unixporn.
+opacity = 0.85
+padding = { x = 12, y = 12 }
+dynamic_title = true
+
+[font]
+# Asegúrate de tener instalada una Nerd Font para que NvChad no se rompa
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+size = 10.0
+
+[colors.primary]
+background = '#0f1419'
+foreground = '#e6e1cf'
+
+[colors.normal]
+black =   '#000000'
+red =     '#ff3333'
+green =   '#b8cc52'
+yellow =  '#e7c547'
+blue =    '#36a3d9'
+magenta = '#f07178'
+cyan =    '#95e6cb'
+white =   '#ffffff'
+
+[colors.bright]
+black =   '#323232'
+red =     '#ff6565'
+green =   '#eafe44'
+yellow =  '#fff779'
+blue =    '#68d5ff'
+magenta = '#ffa3aa'
+cyan =    '#c7fffd'
+white =   '#ffffff'
+
+# El color naranja/dorado característico de Ayu para la selección
+[colors.selection]
+text = '#0f1419'
+background = '#f29718'
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
