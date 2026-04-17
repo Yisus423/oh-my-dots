@@ -37,6 +37,9 @@ exec_always --no-startup-id pkill dunst; dunst
 # Greenclip (portapapeles):
 exec_always --no-startup-id greenclip daemon &
 
+# Evitar que la pantalla se apague (modo No Signal)
+exec --no-startup-id xset s off && xset -dpms
+
 #Udiskie (pendrive loader):
 exec --no-startup-id udiskie &
 
