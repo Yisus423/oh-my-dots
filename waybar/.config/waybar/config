@@ -1,0 +1,18 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "battery", "tray"],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true
+    },
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y}  "
+    },
+    "cpu": { "format": "{usage}% " },
+    "memory": { "format": "{}% " }
+}
