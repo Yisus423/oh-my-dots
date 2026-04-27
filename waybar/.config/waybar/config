@@ -1,18 +1,93 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "battery", "tray"],
+    "height": 32,
+    "spacing": 0,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "disk",
+        "custom/separator",
+        "pulseaudio",
+        "custom/separator",
+        "sway/language",
+        "custom/separator",
+        "memory",
+        "custom/separator",
+        "cpu",
+        "custom/separator",
+        "network",
+        "custom/separator",
+        "battery",
+        "custom/separator",
+        "clock",
+        "custom/powermenu"
+    ],
+    
     "sway/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true
+        "all-outputs": true,
+        "format": "{name}"
+    },
+    "sway/window": {
+        "format": "{title}",
+        "max-length": 60
+    },
+    "disk": {
+        "interval": 25,
+        "format": "<span color='#e6b450'>{path}</span> {percentage_used}%",
+        "path": "/"
+    },
+    "pulseaudio": {
+        "format": "<span color='#e6b450'>VOL </span>{volume}%",
+        "format-muted": "<span color='#475266'>muted</span>"
+    },
+    "sway/language": {
+        "format": "<span color='#e6b450'>{short}</span>"
+    },
+    "memory": {
+        "interval": 2,
+        "format": "<span color='#e6b450'>RAM </span>{percentage}%"
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "<span color='#e6b450'>CPU </span>{usage}%"
+    },
+    "network": {
+        "interval": 5,
+        "format-wifi": "<span color='#e6b450'>{ifname}</span> {essid}",
+        "format-disconnected": "<span color='#e6b450'>{ifname}</span> <span color='#475266'>disconnected</span>",
+        "tooltip": false
+    },
+    "battery": {
+        "bat": "BAT1",
+        "adapter": "AC0",
+        "interval": 5,
+        "states": {
+            "full": 99,
+            "low": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "<span color='#59c2ff'>{icon}</span> {capacity}%",
+        "format-plugged": "<span color='#59c2ff'></span> {capacity}%",
+        "format-full": "<span color='#e6b450'></span> {capacity}%",
+        "format-icons": ["", "", "", "", ""]
     },
     "clock": {
-        "format": "{:%H:%M}  ",
-        "format-alt": "{:%A, %B %d, %Y}  "
+        "interval": 1,
+        "format": "<span color='#e6b450'>{:%H:%M}</span>",
+        "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
     },
-    "cpu": { "format": "{usage}% " },
-    "memory": { "format": "{}% " }
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false
+    },
+    "custom/powermenu": {
+        "format": "<span color='#e6b450'> ⏻ </span>",
+        "on-click": "~/.local/bin/powermenu.sh",
+        "tooltip": false
+    }
 }

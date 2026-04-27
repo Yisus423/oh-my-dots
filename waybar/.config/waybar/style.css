@@ -1,25 +1,80 @@
+/* Paleta de colores basada en mi Polybar */
+@define-color background #0a0e14;
+@define-color background-alt #1f2430;
+@define-color foreground #b3b1ad;
+@define-color primary #e6b450;
+@define-color secondary #59c2ff;
+@define-color alert #ff3333;
+@define-color disabled #475266;
+
 * {
     border: none;
+    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 window#waybar {
-    background: #0a0e14;
-    border-bottom: 2px solid #e6b450;
-    color: #b3b1ad;
+    background-color: @background;
+    color: @foreground;
 }
 
+/* --- Espacios de Trabajo (sway/workspaces) --- */
 #workspaces button {
-    padding: 0 5px;
-    color: #b3b1ad;
+    padding: 0 8px;
+    background-color: transparent;
+    color: @foreground;
+    border-bottom: 2px solid transparent;
 }
 
+/* label-active (Fondo alternativo y subrayado primary) */
 #workspaces button.focused {
-    color: #e6b450;
-    background-color: #1f2430;
+    background-color: @background-alt;
+    color: @foreground;
+    border-bottom: 2px solid @primary;
 }
 
-#clock, #cpu, #memory, #battery {
-    padding: 0 10px;
+/* label-urgent (Fondo alert) */
+#workspaces button.urgent {
+    background-color: @alert;
+    color: @background;
+}
+
+/* label-empty (Deshabilitado) - Sway gestiona esto diferente, pero aplicamos hover */
+#workspaces button:hover {
+    background-color: @background-alt;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+/* --- Módulos Generales --- */
+#window {
+    padding-left: 12px;
+}
+
+#disk, 
+#pulseaudio, 
+#language, 
+#memory, 
+#cpu, 
+#network, 
+#battery, 
+#clock {
+    padding: 0 8px;
+}
+
+/* --- Separador y Menú de Apagado --- */
+#custom-separator {
+    color: @disabled;
+    padding: 0 2px;
+}
+
+#custom-powermenu {
+    padding-right: 8px;
+}
+
+/* Batería en estado bajo */
+#battery.low {
+    color: @alert;
 }
