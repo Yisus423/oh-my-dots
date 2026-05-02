@@ -44,23 +44,9 @@ set $menu fuzzel
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
-# Monitor Externo (Prioridad)
-output HDMI-A-1 {
-    mode 1920x1080
-    pos 0 0
-}
-
-# Pantalla de la Canaima
-output eDP-1 {
-    mode 1366x768
-    pos 1920 0
-}
-
-# Lógica simple para priorizar el HDMI
-# Esto apaga la integrada si detecta el HDMI al arrancar
-exec_always swaymsg [output="HDMI-A-1" exists] output eDP-1 disable
-exec_always swaymsg [output="HDMI-A-1" !exists] output eDP-1 enable
-# Atajo de teclado para apagar la pantalla de la Canaima:
+# kanshi == autorandr Wayland
+exec_always pkill kanshi; kanshi
+# Atajo de teclado para apagar o prender la pantalla de la Canaima:
 bindsym $mod+p output eDP-1 toggle
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # This is commented in Debian, because the Sway wallpaper files are in a separate

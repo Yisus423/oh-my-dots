@@ -1,0 +1,10 @@
+# Prioridad absoluta al HDMI si está presente
+profile {
+    output HDMI-A-1 enable mode 1920x1080 position 0,0
+    output eDP-1 disable
+}
+
+# Perfil por defecto (Canaima)
+profile {
+    output eDP-1 enable mode 1366x768 position 0,0
+}
