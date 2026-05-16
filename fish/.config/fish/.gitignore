@@ -1,0 +1,7 @@
+# Ignorar las carpetas de caché y autocompletados autogenerados por Fisher
+completions/
+conf.d/
+functions/fisher.fish
+
+# Ignorar las variables locales y el historial del shell por privacidad y seguridad
+fish_variables
