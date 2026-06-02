@@ -1,6 +1,7 @@
 # --- ENTORNO Y VARIABLES ---
 # Fish usa 'set -gx' (global y export) en lugar de 'export'
 set -gx EDITOR nvim
+set --export BUN_INSTALL "$HOME/.bun" # Variable requerida por bun
 
 # --- RUTAS (PATH) ---
 # fish_add_path es la forma moderna y segura de añadir rutas en Fish. 
@@ -8,7 +9,7 @@ set -gx EDITOR nvim
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/.opencode/bin
-
+fish_add_path $BUN_INSTALL/bin
 # revisamos si ls shell es interactiva
 status is-interactive; or return
 # Sí lo es sigue leyendo la configuración
