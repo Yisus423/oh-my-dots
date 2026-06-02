@@ -29,6 +29,7 @@ abbr -a gc git commit
 abbr -a ga git add
 abbr -a gp git push
 abbr -a gl git pull
+abbr -a gst git status
 abbr -a mvim 'NVIM_APPNAME=mvim nvim'
 # --- DESACTIVAR EL SALUDO DE FISH ---
 set -g fish_greeting ""
