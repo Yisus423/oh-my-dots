@@ -10,6 +10,7 @@ fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/.opencode/bin
 fish_add_path $BUN_INSTALL/bin
+fish_add_path ~/go/bin
 # revisamos si ls shell es interactiva
 status is-interactive; or return
 # Sí lo es sigue leyendo la configuración
