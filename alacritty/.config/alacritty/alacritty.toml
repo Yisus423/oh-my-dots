@@ -1,6 +1,6 @@
 [window]
-# Transparencia (0.0 a 1.0). 0.85 es el punto dulce para Unixporn.
-opacity = 0.85
+# Fondo de color plano — la identidad Ayu Gold usa superficies opacas.
+opacity = 1.0
 padding = { x = 12, y = 12 }
 dynamic_title = true
 
