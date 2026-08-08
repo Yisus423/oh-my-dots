@@ -11,33 +11,33 @@ bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
 size = 10.0
 
 [colors.primary]
-background = '#0f1419'
-foreground = '#e6e1cf'
+background = '#0a0e14'
+foreground = '#b3b1ad'
 
 [colors.normal]
-black =   '#000000'
+black =   '#131721'
 red =     '#ff3333'
-green =   '#b8cc52'
-yellow =  '#e7c547'
-blue =    '#36a3d9'
-magenta = '#f07178'
-cyan =    '#95e6cb'
-white =   '#ffffff'
+green =   '#aad94c'
+yellow =  '#e6b450'
+blue =    '#59c2ff'
+magenta = '#d2a6ff'
+cyan =    '#59c2ff'
+white =   '#b3b1ad'
 
 [colors.bright]
-black =   '#323232'
+black =   '#475266'
 red =     '#ff6565'
 green =   '#eafe44'
 yellow =  '#fff779'
 blue =    '#68d5ff'
-magenta = '#ffa3aa'
-cyan =    '#c7fffd'
+magenta = '#d2a6ff'
+cyan =    '#59c2ff'
 white =   '#ffffff'
 
-# El color naranja/dorado característico de Ayu para la selección
+# Selección con el acento principal (gold) — identidad Ayu Gold
 [colors.selection]
-text = '#0f1419'
-background = '#f29718'
+text = '#0a0e14'
+background = '#e6b450'
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
