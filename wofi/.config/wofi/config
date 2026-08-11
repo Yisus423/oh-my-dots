@@ -1,0 +1,20 @@
+# wofi configuration (Ayu Gold)
+# See wofi(5) and wofi(7) for all options.
+
+show=drun
+width=45%
+height=40%
+location=center
+
+prompt=❯ 
+term=foot
+
+insensitive=true
+matching=fuzzy
+sort_order=default
+
+hide_scroll=true
+lines=7
+
+# Colors and styling
+stylesheet=style.css

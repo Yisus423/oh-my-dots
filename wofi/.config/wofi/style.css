@@ -1,0 +1,58 @@
+/* wofi style — Ayu Gold */
+/* Paleta adaptada de rofi/Ayu_Gold.rasi */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11pt;
+}
+
+window {
+    background-color: rgba(10, 14, 20, 0.95);
+    border: 2px solid #e6b450;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#outer-box {
+    margin: 0;
+}
+
+#input {
+    background-color: #1f2430;
+    color: #e6e1cf;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#scroll {
+    background-color: transparent;
+}
+
+#inner-box {
+    margin: 0;
+}
+
+#entry {
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #5c6773;
+}
+
+#entry:selected {
+    background-color: #1f2430;
+    color: #e6b450;
+}
+
+#text {
+    margin: 0;
+}
+
+#text:selected {
+    color: #e6b450;
+}
+
+#img {
+    margin-right: 10px;
+}
