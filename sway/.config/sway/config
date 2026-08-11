@@ -53,7 +53,7 @@ bindsym $mod+p output eDP-1 toggle
 # package `sway-backgrounds`. Installing this package drops a config file to
 # /etc/sway/config.d/
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-exec_always swaybg -i ~/dotfiles/media/wallpapers/ayu_gold_blur.png
+output * bg ~/dotfiles/media/wallpapers/ayu_gold_blur.png fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
