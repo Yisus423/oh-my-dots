@@ -3,8 +3,8 @@
 
 show=drun
 width=45%
-height=40%
 location=center
+valign=center
 
 prompt=❯ 
 term=foot
@@ -15,6 +15,7 @@ sort_order=default
 
 hide_scroll=true
 lines=7
+height=400px
 
 # Colors and styling
 stylesheet=style.css
