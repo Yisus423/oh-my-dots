@@ -39,7 +39,7 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu wofi
+set $menu tofi-drun
 
 include /etc/sway/config-vars.d/*
 
@@ -248,6 +248,5 @@ bindsym $mod+r mode "resize"
 bar {
   swaybar_command waybar
     }
-}
 
 # include /etc/sway/config.d/*

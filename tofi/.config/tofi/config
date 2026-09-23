@@ -1,0 +1,48 @@
+# tofi configuration (Ayu Gold)
+# Ported from rofi/Ayu_Gold.rasi. See tofi(5) for all options.
+
+# Behaviour
+drun-launch = true
+hide-cursor = true
+history = true
+terminal = foot
+matching-algorithm = fuzzy
+
+# Window — sized as % of the active screen, centered (anchor default: center)
+width = 45%
+height = 30%
+corner-radius = 8
+border-width = 2
+border-color = #e6b450
+outline-width = 0
+background-color = #0a0e14F2
+
+# Padding (rofi window padding was 20px)
+padding-top = 20
+padding-bottom = 20
+padding-left = 20
+padding-right = 20
+
+# Text — font by name (Pango) for full glyph fallback: the prompt glyph is
+# not in the Nerd Font TTF. Point font at a .ttf path for <1ms startup.
+font = JetBrainsMono Nerd Font
+font-size = 11
+text-color = #5c6773
+prompt-text = ❯
+prompt-color = #e6b450
+prompt-padding = 10
+input-color = #e6e1cf
+input-background = #1f2430
+input-background-padding = 8,8
+input-background-corner-radius = 4
+result-spacing = 4
+
+# Cursor (gold, like wofi caret-color)
+text-cursor = true
+text-cursor-color = #e6b450
+
+# Selection
+selection-color = #e6b450
+selection-background = #1f2430
+selection-background-padding = 8,12
+selection-background-corner-radius = 4
