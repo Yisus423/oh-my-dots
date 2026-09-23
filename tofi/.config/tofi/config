@@ -32,9 +32,6 @@ prompt-text = ❯
 prompt-color = #e6b450
 prompt-padding = 10
 input-color = #e6e1cf
-input-background = #1f2430
-input-background-padding = 8,8
-input-background-corner-radius = 4
 result-spacing = 4
 
 # Cursor (gold, like wofi caret-color)
@@ -44,5 +41,5 @@ text-cursor-color = #e6b450
 # Selection
 selection-color = #e6b450
 selection-background = #1f2430
-selection-background-padding = 8,12
+selection-background-padding = 0,12
 selection-background-corner-radius = 4
