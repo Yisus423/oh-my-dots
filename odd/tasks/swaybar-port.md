@@ -50,6 +50,9 @@ status generator.
 ## Evidence
 - `b874d6f` feat(bar): port waybar aesthetic to native swaybar via
   i3status-rust (branch `feat/swaybar-port`, off `main`)
+- `749cb4e` fix(bar): calibrate thresholds and flatten metric state colors
+  (user feedback round: RAM counted cached memory; disk state checked used
+  against alert=10; cpu spikes painted the bar red; workspace buttons small)
 
 ## Config gotchas found while testing (v0.36.1)
 - The global theme table key is `[theme.overrides]` (the README's
