@@ -29,7 +29,7 @@ separator_fg = "#475266"
 [[block]]
 block = "focused_window"
 driver = "sway_ipc"
-format = " $title.str(max_w:60) "
+format = "{ $title.str(max_w:60) |}"
 
 [[block]]
 block = "disk_space"
