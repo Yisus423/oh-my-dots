@@ -40,3 +40,8 @@ Make `powermenu.sh` work on both Wayland (tofi) and X11 (rofi).
   powermenu (user feedback round: menu felt too wide -> 15%, only three of
   five options fit -> 25% height, $mod+Shift+e now opens the powermenu
   instead of swaynag; $powermenu variable follows the $menu pattern)
+- `1418cbf` fix(powermenu): drop prompt and cursor, fit all five options
+  (user feedback round: mid-list options still didn't fit at 25%; prompt
+  level vs options looked off. tofi 0.9.1 has no hide-prompt, so
+  prompt-text empty + text-cursor false makes the input row invisible;
+  height 30% fits the five options plus that row)
