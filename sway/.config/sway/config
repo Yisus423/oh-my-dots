@@ -248,6 +248,7 @@ bindsym $mod+r mode "resize"
 bar {
     position top
     height 32
+    workspace_min_width 40
     font JetBrainsMono Nerd Font Medium 12
     status_command ~/.cargo/bin/i3status-rs
     colors {

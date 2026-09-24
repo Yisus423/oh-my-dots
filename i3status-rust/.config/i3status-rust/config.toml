@@ -31,7 +31,14 @@ block = "disk_space"
 path = "/"
 interval = 25
 info_type = "used"
+warning = 80
+alert = 90
 format = " <span color='#e6b450'>$path</span> $percentage "
+
+[block.theme_overrides]
+warning_fg = "#b3b1ad"
+critical_fg = "#b3b1ad"
+critical_bg = "#0a0e14"
 
 [[block]]
 block = "sound"
@@ -45,12 +52,22 @@ format = " <span color='#e6b450'>$layout</span> "
 [[block]]
 block = "memory"
 interval = 2
-format = " <span color='#e6b450'>RAM</span> $mem_total_used_percents.eng(w:2) "
+format = " <span color='#e6b450'>RAM</span> $mem_used_percents.eng(w:2) "
+
+[block.theme_overrides]
+warning_fg = "#b3b1ad"
+critical_fg = "#b3b1ad"
+critical_bg = "#0a0e14"
 
 [[block]]
 block = "cpu"
 interval = 2
 format = " <span color='#e6b450'>CPU</span> $utilization "
+
+[block.theme_overrides]
+warning_fg = "#b3b1ad"
+critical_fg = "#b3b1ad"
+critical_bg = "#0a0e14"
 
 [[block]]
 block = "net"
