@@ -53,6 +53,8 @@ status generator.
 - `749cb4e` fix(bar): calibrate thresholds and flatten metric state colors
   (user feedback round: RAM counted cached memory; disk state checked used
   against alert=10; cpu spikes painted the bar red; workspace buttons small)
+- `c451ab5` feat(bar): add focused window title block (first status block,
+  sway_ipc driver, push-based, hidden until first event, max 60 chars)
 
 ## Config gotchas found while testing (v0.36.1)
 - The global theme table key is `[theme.overrides]` (the README's
