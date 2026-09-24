@@ -27,6 +27,11 @@ separator_fg = "#475266"
 # --- Status modules (right side of the bar) ---
 
 [[block]]
+block = "focused_window"
+driver = "sway_ipc"
+format = " $title.str(max_w:60) "
+
+[[block]]
 block = "disk_space"
 path = "/"
 interval = 25
