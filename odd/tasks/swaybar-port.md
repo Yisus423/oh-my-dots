@@ -55,6 +55,11 @@ status generator.
   against alert=10; cpu spikes painted the bar red; workspace buttons small)
 - `c451ab5` feat(bar): add focused window title block (first status block,
   sway_ipc driver, push-based, hidden until first event, max 60 chars)
+- `4db8a66` fix(bar): hide focused_window on empty title instead of erroring
+  (empty workspace raised "Failed to render full text": the block rendered
+  with no values, so `$title` raised PlaceholderNotFound. Fixed with the
+  recursive-template fallback `{ $title |}`: the empty alternative renders an
+  empty full text and `get_data` hides the block when full is empty)
 
 ## Config gotchas found while testing (v0.36.1)
 - The global theme table key is `[theme.overrides]` (the README's
@@ -73,6 +78,16 @@ status generator.
   headless test environment, not in the user session.
 - The debug macro for the battery block is commented out upstream, so
   `RUST_LOG=battery=debug` produces no battery logs.
+- The upstream doc for focused_window claims a "Missing" fallback text
+  (`format = " $title.str(0,21) | Missing "`), but in v0.36.1 a missing
+  placeholder propagates the error before any fallback text renders. The
+  working mechanism is the recursive-template fallback `{ $a | $b }`:
+  `FormatTemplate::render` tries each alternative and swallows
+  PlaceholderNotFound/IncompatibleFormatter/NumberOutOfRange for
+  non-final alternatives; the final alternative must render (possibly
+  empty) or the error propagates. An empty final alternative renders
+  `Ok(vec![])` and `widget.rs get_data` hides the block when `full` is
+  empty.
 
 ## Notes
 - Unrelated in-progress changes in the working tree (fish, nvim, greetd,
