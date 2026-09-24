@@ -40,6 +40,7 @@ set $right l
 set $term foot
 # Your preferred application launcher
 set $menu tofi-drun
+set $powermenu ~/.local/bin/powermenu.sh
 
 include /etc/sway/config-vars.d/*
 
@@ -114,7 +115,7 @@ input "type:keyboard" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec $powermenu
 #
 # Moving around:
 #

@@ -3,7 +3,7 @@
 options="󰐥 Apagar\n󰜉 Reiniciar\n󰤄 Suspender\n󰗼 Cerrar Sesión\n󰜺 Cancelar"
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-    chosen=$(printf '%b' "$options" | tofi --prompt-text "Sistema:" --width 20% --height 20%)
+    chosen=$(printf '%b' "$options" | tofi --prompt-text "Sistema:" --width 15% --height 25%)
 else
     chosen=$(printf '%b' "$options" | rofi -dmenu -i -p "Sistema:" -theme-str 'window {width: 15%;}')
 fi
