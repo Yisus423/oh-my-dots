@@ -36,3 +36,7 @@ Make `powermenu.sh` work on both Wayland (tofi) and X11 (rofi).
 ## Evidence
 - `be5b6da` feat(powermenu): dual-env launcher detection (tofi/rofi)
 - `11296da` fix(launcher): use fuzzy-match option compatible with tofi 0.9.1
+- `9c30824` feat(powermenu): resize tofi menu and bind exit shortcut to
+  powermenu (user feedback round: menu felt too wide -> 15%, only three of
+  five options fit -> 25% height, $mod+Shift+e now opens the powermenu
+  instead of swaynag; $powermenu variable follows the $menu pattern)
