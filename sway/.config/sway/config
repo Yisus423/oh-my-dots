@@ -246,7 +246,18 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-  swaybar_command waybar
+    position top
+    height 32
+    font JetBrainsMono Nerd Font Medium 12
+    status_command ~/.cargo/bin/i3status-rs
+    colors {
+        background #0a0e14
+        statusline #b3b1ad
+        focused_workspace #e6b450 #1f2430 #b3b1ad
+        active_workspace #1f2430 #1f2430 #b3b1ad
+        inactive_workspace #0a0e14 #0a0e14 #b3b1ad
+        urgent_workspace #ff3333 #ff3333 #0a0e14
     }
+}
 
 # include /etc/sway/config.d/*

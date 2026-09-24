@@ -1,0 +1,85 @@
+# i3status-rust config — Ayu Gold port of the waybar setup
+# See i3status-rs(1), doc/themes.md and the block documentation.
+
+icons_format = " {icon} "
+
+[icons]
+icons = "material-nf"
+
+[theme]
+theme = "plain"
+[theme.overrides]
+# Blocks blend into the bar background; gold accents come from pango
+# spans in each block's format (matches the waybar aesthetic).
+idle_bg = "#0a0e14"
+idle_fg = "#b3b1ad"
+info_bg = "#0a0e14"
+info_fg = "#b3b1ad"
+good_bg = "#0a0e14"
+good_fg = "#e6b450"
+warning_bg = "#0a0e14"
+warning_fg = "#ff3333"
+critical_bg = "#ff3333"
+critical_fg = "#0a0e14"
+separator_bg = "#0a0e14"
+separator_fg = "#475266"
+
+# --- Status modules (right side of the bar) ---
+
+[[block]]
+block = "disk_space"
+path = "/"
+interval = 25
+info_type = "used"
+format = " <span color='#e6b450'>$path</span> $percentage "
+
+[[block]]
+block = "sound"
+format = " <span color='#e6b450'>VOL</span> $volume "
+
+[[block]]
+block = "keyboard_layout"
+driver = "sway"
+format = " <span color='#e6b450'>$layout</span> "
+
+[[block]]
+block = "memory"
+interval = 2
+format = " <span color='#e6b450'>RAM</span> $mem_total_used_percents.eng(w:2) "
+
+[[block]]
+block = "cpu"
+interval = 2
+format = " <span color='#e6b450'>CPU</span> $utilization "
+
+[[block]]
+block = "net"
+interval = 5
+format = " <span color='#e6b450'>$device</span> $ssid "
+inactive_format = " <span color='#e6b450'>$device</span> <span color='#475266'>disconnected</span> "
+
+[[block]]
+block = "battery"
+device = "BAT1"
+interval = 5
+full_threshold = 99
+good = 15
+format = " $icon $percentage "
+full_format = " <span color='#e6b450'>$icon</span> $percentage "
+charging_format = " <span color='#59c2ff'>$icon</span> $percentage "
+not_charging_format = " <span color='#59c2ff'>$icon</span> $percentage "
+
+[[block]]
+block = "time"
+interval = 1
+format = " <span color='#e6b450'>$timestamp.datetime(f:'%H:%M')</span> "
+
+[[block]]
+block = "custom"
+command = "true"
+interval = "once"
+format = " <span color='#e6b450'>⏻</span> "
+
+[[block.click]]
+button = "left"
+cmd = "~/.local/bin/powermenu.sh"
