@@ -6,7 +6,7 @@ drun-launch = true
 hide-cursor = true
 history = true
 terminal = foot
-matching-algorithm = fuzzy
+fuzzy-match = true
 
 # Window — sized as % of the active screen, centered (anchor default: center)
 width = 45%
