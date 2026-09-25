@@ -45,3 +45,12 @@ Make `powermenu.sh` work on both Wayland (tofi) and X11 (rofi).
   level vs options looked off. tofi 0.9.1 has no hide-prompt, so
   prompt-text empty + text-cursor false makes the input row invisible;
   height 30% fits the five options plus that row)
+- `bfa0676` fix(launcher): show mouse cursor on tofi (hide-cursor false)
+- NOTE (testing): tofi 0.9.1 aborts (SIGABRT, cairo assert on scale 0) when
+  NO output is active — e.g. the monitor powered off. Percentages parse
+  correctly when an output is active (verified: dmenu tests with 15%/25%
+  and 15%/30% ran clean with the monitor on; the "Width or height set to 0"
+  warning only appears with no active output). Not a config bug.
+- Environment: session env is WAYLAND_DISPLAY=wayland-1 and
+  SWAYSOCK=/run/user/1000/sway-ipc.<sway-pid>.sock; sway restarts change the
+  PID, so check /run/user/1000/sway-ipc.* for the current socket.
