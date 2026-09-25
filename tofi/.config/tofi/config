@@ -3,7 +3,7 @@
 
 # Behaviour
 drun-launch = true
-hide-cursor = true
+hide-cursor = false
 history = true
 terminal = foot
 fuzzy-match = true
